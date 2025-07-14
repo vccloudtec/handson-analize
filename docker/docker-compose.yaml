@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    server-sidt:
+        image: ubuntu:20.04
+        build: .
+        container_name: handson-analize
+        restart: on-failure
+        ports:
+            - 8003:80
+        volumes:
+            - ./files:/home
